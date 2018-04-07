@@ -1,0 +1,2 @@
+API_KEY_MAPS = ''
+API_VERSION = '0.1'
