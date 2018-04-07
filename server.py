@@ -11,6 +11,11 @@ server = Flask(__name__)
 def api_version():
     return 'api version: ' + API_VERSION
 
+@server.route('/buscar', methods=['POST'])
+def query_traffic():
+    return 'mapa do onibus'
+
+
 
 
 
