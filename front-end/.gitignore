@@ -1,0 +1,9 @@
+/node_modules
+/dist
+/.tmp
+/.temp
+/.idea
+/.sass-cache
+/bower_components
+.DS_Store
+yarn.lock

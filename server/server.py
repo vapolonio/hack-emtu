@@ -13,6 +13,9 @@ def api_version():
 
 @server.route('/buscar', methods=['POST'])
 def query_traffic():
+    print(request.args.get('origem'))
+    print(request.args.get('destino'))
+    # search_direction(origem, destino)
     return 'mapa do onibus'
 
 
