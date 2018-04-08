@@ -1,26 +1,288 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Escala</title>
-        @@include('./include/_header.html')
+        <title>Contorne</title>
+        <!-- @@include('./include/_header.html') -->
     </head>
     <body id="page-top">
+<style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            transition: all 0.25s cubic-bezier(0.37, 0, 0.45, 0.99);
+          }
+          *:before, *:after {
+            box-sizing: inherit;
+          }
+          
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Helvetica Neue", sans-serif;
+            line-height: 1.75;
+            background-color: #fafafa;
+          }
+          
+          @-webkit-keyframes driving {
+            0% {
+              -webkit-transform: translateY(-650px);
+                      transform: translateY(-650px);
+            }
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+            }
+          }
+          
+          @keyframes driving {
+            0% {
+              -webkit-transform: translateY(-650px);
+                      transform: translateY(-650px);
+            }
+            100% {
+              -webkit-transform: translateY(0);
+                      transform: translateY(0);
+            }
+          }
+          .hero__title {
+            padding: 3em 2rem 16rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 0001;
+          }
+          
+          .gps-bg {
+            background-color: #ac8dff;
+            position: relative;
+            -webkit-perspective: 500px;
+                    perspective: 500px;
+            overflow: hidden;
+            height: 130vh;
+          }
+          .gps-bg:after {
+            content: "";
+            background-color: #fafafa;
+            position: absolute;
+            width: 200%;
+            height: 5em;
+            bottom: 0;
+            -webkit-transform: skewY(-2deg);
+                    transform: skewY(-2deg);
+          }
+          .gps-bg__guts {
+            position: absolute;
+            -webkit-transform: rotateX(45deg);
+                    transform: rotateX(45deg);
+            width: calc( 100% + 1000px );
+            height: 100%;
+            left: -500px;
+          }
+          .gps-bg__bg {
+            height: 1300px;
+            background-image: url(http://www.rastrac.com/hubfs/roads.svg);
+            background-position: 50%;
+            background-size: 25%;
+            position: absolute;
+            top: -162px;
+            width: 100%;
+            -webkit-transform: translateY(-650px);
+                    transform: translateY(-650px);
+            -webkit-animation: driving 10000ms linear 0ms infinite;
+                    animation: driving 10000ms linear 0ms infinite;
+          }
+          .gps-bg__route {
+            width: 2em;
+            background-color: #fff;
+            position: absolute;
+            top: -162px;
+            bottom: -162px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+            box-shadow: 0 0 13px 5px rgba(46, 18, 107, 0.25);
+          }
+          .gps-bg__route:after {
+            content: "";
+            width: 60%;
+            background-color: #6c38de;
+            position: absolute;
+            top: 0;
+            bottom: 35%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+          }
+          .gps-bg__fade {
+            background-image: linear-gradient(to bottom, #ac8dff 10%, rgba(172, 141, 255, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            z-index: 1;
+          }
+          .gps-bg__marker {
+            height: 6em;
+            width: 6em;
+            background-color: #fff;
+            border-right: 1px solid #ddd;
+            border-bottom: 3px solid #ddd;
+            border-left: 1px solid #ddd;
+            border-radius: 100%;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+            box-shadow: 0 0.125em 10px 3px rgba(46, 18, 107, 0.25);
+          }
+          .gps-bg__marker:after {
+            content: "";
+            border-left: 1.5em solid transparent;
+            border-right: 1.5em solid transparent;
+            border-bottom: 3em solid #6c38de;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+          }
 
 
-    <header class="hero hero--map gps-bg">
+form{
+    padding:30px;
+}
 
-        <div class="gps-bg__guts">
-            <div class="gps-bg__bg"></div>
-            <div class="gps-bg__route"></div>
-            <div class="gps-bg__marker"></div>
-        </div>
-        <div class="gps-bg__fade"></div>
-    
-        <h1 class="hero__title">
-            Contorno
-        </h1>
-        
-    </header>
+.inner-form{
+    background:#FFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+}
+
+label{
+    font-weight:400;
+    font-size:15px;
+}
+
+.form-control {
+    background-color: #f5f5f5;
+    box-shadow: none;
+    color: #565656;
+    font-size:14px;
+    padding:30px 10px;
+    margin-bottom:30px;
+    border: 1px solid #f1f1f1;
+}
+
+.btn{ 
+    background: #72d6f5;
+    color: #FFF;
+    border-radius: 6px;
+    margin: 0 auto;
+    height: 48px;
+    line-height: 38px;
+    display: table;
+    font-size: 15px;
+    width: 100%;
+}
+
+.btn:hover{
+    background:#FFF;
+    border:2px solid #24acb3;
+}
+
+.forgot{
+    text-align:center;
+    margin-top:30px;
+    font-size:16px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #72d6f5;
+    border-radius: 0;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #6eafc4;
+}
+
+
+a.btn:hover{
+    background-color: #ac8dff;
+    border: none;
+  }
+          
+</style>
+
+            <header class="hero hero--map gps-bg">
+	
+                    <div class="gps-bg__guts">
+                        <div class="gps-bg__bg"></div>
+                        <div class="gps-bg__route"></div>
+                        <div class="gps-bg__marker"></div>
+                    </div>
+                    <div class="gps-bg__fade"></div>
+            
+                    <div class="login" style="
+                    width: 300px;
+                    margin: 100px auto 0 auto;
+                    text-align: center;
+                    z-index: 999;
+                    position: inherit;
+                    background: white;"
+                    >
+
+                            <div class="inner-form">
+            
+                                    <h1 style="padding-top:30px;color: #7138e4;">Contorne</h1> 
+                               
+                                      <form role="form">
+                                          <div class="row">
+                                                 
+                                               <div class="col-lg-12">
+                                                   <label>Email</label>
+                                                   <div class="form-group">
+                                                       <input type="email" name="email" id="email" class="form-control" placeholder="">
+                                                   </div>
+                                               </div>
+                                               
+                                               <div class="col-lg-12">
+                                                   <label>Senha</label>
+                                                   <div class="form-group">
+                                                       <input type="password" name="password" id="password" class="form-control" placeholder="">
+                                                   </div>
+                                               </div>
+                                               
+                                               <div class="col-lg-12">
+                                                   <a href="home.html" type="submit" class="btn btn-default" style="border-radius:0px">
+                                                       <span>Login</span>
+                                                   </a>
+                                               </div>
+                                               
+                                               <div class="col-lg-12">
+                                                   <div class="forgot">
+                                                       <p>Esqueceu a senha ou email?</p>
+                                                   </div>
+                                               </div>
+                                                   
+                                            </div>
+                                        </form>
+                                   </div>
+                    </div>
+                    
+                </header>
 
 
         <!-- @@include('./include/footer.html') -->

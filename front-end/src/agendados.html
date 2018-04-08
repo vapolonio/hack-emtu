@@ -5,7 +5,7 @@
         @@include('./include/_header.html')
     </head>
     <body id="page-top">
-            <div class="container">
+            <div class="container-fluid">
              <div class="mail-box">
                 @@include('./include/navbar.html')
                 <aside class="lg-side">
@@ -17,7 +17,8 @@
                             </div>
                         </form>
                     </div>
-                    <div class="inbox-body">
+                    <div class="inbox-body" style="padding: 0 30px;">
+                            @@include('./include/option.html')
                             <table class="table table-inbox table-hover">
                                     <tbody>
                                             <tr data-status="pagado">
@@ -28,20 +29,18 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a href="javascript:;" class="star">
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                    </a>
+                                                    
                                                 </td>
                                                 <td>
                                                     <div class="media">
                                                         
                                                         <div class="media-body">
-                                                            <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                            <span class="media-meta">20 de Fevereiro, 2018</span>
                                                             <h4 class="title">
-                                                                Lorem Impsum
-                                                                <span class="pull-right pendiente">(Pendiente)</span>
+                                                                Linha 331
+                                                                <span class="pull-right pendiente" style="color:#2196F3">Agendado</span>
                                                             </h4>
-                                                            <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                            <p class="summary">Correção de tráfego, obra programada</p>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -54,20 +53,18 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a href="javascript:;" class="star">
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                    </a>
+                                                    
                                                 </td>
                                                 <td>
                                                     <div class="media">
                                                         
                                                         <div class="media-body">
-                                                            <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                            <span class="media-meta">22 de março, 2018</span>
                                                             <h4 class="title">
-                                                                Lorem Impsum
-                                                                <span class="pull-right cancelado">(Cancelado)</span>
+                                                                Linha 420
+                                                                <span class="pull-right cancelado" style="color:#F44336">Cancelado</span>
                                                             </h4>
-                                                            <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                            <p class="summary">Desvio de rota devido a evento</p>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -80,50 +77,22 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <a href="javascript:;" class="star star-checked">
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="media">
                                                         
                                                         <div class="media-body">
-                                                            <span class="media-meta pull-right">Febrero 13, 2016</span>
+                                                            <span class="media-meta">25 de março, 2018</span>
                                                             <h4 class="title">
-                                                                Lorem Impsum
-                                                                <span class="pull-right pagado">(Pagado)</span>
+                                                                Linha 539
+                                                                <span class="pull-right pagado" style="color:#8BC34A">Efetuado</span>
                                                             </h4>
-                                                            <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                            <p class="summary">Solicitado desvio por aumento do tráfego</p>
                                                         </div>
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <tr data-status="pendiente">
-                                                <td>
-                                                    <div class="ckbox">
-                                                        <input type="checkbox" id="checkbox5">
-                                                        <label for="checkbox5"></label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <a href="javascript:;" class="star">
-                                                        <i class="glyphicon glyphicon-star"></i>
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    <div class="media">
-                                                        
-                                                        <div class="media-body">
-                                                            <span class="media-meta pull-right">Febrero 13, 2016</span>
-                                                            <h4 class="title">
-                                                                Lorem Impsum
-                                                                <span class="pull-right pendiente">(Pendiente)</span>
-                                                            </h4>
-                                                            <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                            
                                         </tbody>
 
                             </table>

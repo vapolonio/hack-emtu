@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Contorne</title>
+        @@include('./include/_header.html')
+    </head>
+    <body id="page-top">
+            <div class="container-fluid">
+             <div class="mail-box">
+                @@include('./include/navbar.html')
+                <aside class="lg-side">
+                    <div class="inbox-head">
+                        <form action="#" class="pull-right position">
+                            <div class="input-append">
+                                <input type="text" class="sr-input" placeholder="Buscar">
+                                <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="inbox-body">
+                            @@include('./include/option.html')
+                            <table class="table table-inbox table-hover">
+                                <img src="./static/img//segunda_tela.png" style="width:100%">
+                            </table>
+                        </div>
+                </aside>
+            </div>
+        </div>
+        @@include('./include/footer.html')
+        @@include('./include/_scripts.html')
+    </body>
+</html>
