@@ -5,6 +5,99 @@
         @@include('./include/_header.html')
     </head>
     <body id="page-top">
+
+            <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+            
+            <div class="container">
+            <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+             <div class="mail-box">
+                <aside class="sm-side">
+                    <div class="user-head">
+                        <h3>Contorne</h3>
+                    </div>
+                    <div class="inbox-body">
+                        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                        <h4 class="modal-title">Compose</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form role="form" class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-lg-2 control-label">To</label>
+                                                <div class="col-lg-10">
+                                                    <input type="text" placeholder="" id="inputEmail1" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-2 control-label">Cc / Bcc</label>
+                                                <div class="col-lg-10">
+                                                    <input type="text" placeholder="" id="cc" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-2 control-label">Subject</label>
+                                                <div class="col-lg-10">
+                                                    <input type="text" placeholder="" id="inputPassword1" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-lg-2 control-label">Message</label>
+                                                <div class="col-lg-10">
+                                                    <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                    </div>
+                    <ul class="inbox-nav inbox-divider">
+                        <li class="active">
+                            <a href="#"><i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right">2</span></a>
+
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-envelope-o"></i> Sent Mail</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bookmark-o"></i> Important</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class=" fa fa-external-link"></i> Drafts <span class="label label-info pull-right">30</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class=" fa fa-trash-o"></i> Trash</a>
+                        </li>
+                    </ul>
+
+                </aside>
+                <aside class="lg-side">
+                    <div class="inbox-head">
+                        <form action="#" class="pull-right position">
+                            <div class="input-append">
+                                <input type="text" class="sr-input" placeholder="Buscar">
+                                <button class="btn sr-btn" type="button"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="inbox-body">
+                        <table class="table table-inbox table-hover">
+                           
+                        </table>
+                    </div>
+                </aside>
+            </div>
+            </div>
+
+
+
+
         @@include('./include/footer.html')
         @@include('./include/_scripts.html')
     </body>
